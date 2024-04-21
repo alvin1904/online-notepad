@@ -1,0 +1,64 @@
+
+.notepad
+    overflow: hidden
+    transform: translate(100px, 40px)
+    border-radius: 5px
+    height: 85%
+    width: 75%
+    background: #212226
+    color: white
+    position: relative
+
+$header-height: 40px
+
+.notepad_header
+    height: $header-height
+    background: #212229
+    position: absolute
+    top: 0
+    z-index: 100
+    width: 100%
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    padding: 10px 15px
+    .header_left, .header_right
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: flex-start
+        gap: 7px
+    .header_right
+        .icons
+            opacity: 0.8
+            cursor: pointer
+            transition: all 0.5s ease-in-out
+            &:hover
+                opacity: 1
+    .circle
+        height: 11px
+        width: 11px
+        border-radius: 50%
+        color: transparent
+        user-select: none
+    .red
+        background: #f53737
+    .yellow
+        background: #f2e34d
+    .green
+        background: #4cec81
+
+$textarea-margin: 30px
+.notepad_textarea
+    all: unset
+    height: 100%
+    width: calc( 100% - 2 * $textarea-margin )
+    padding-top: calc($header-height + 15px )
+    margin-left: $textarea-margin
+    margin-right: $textarea-margin
+    line-height: 1.4rem
+    font-size: 1.1rem
+    &::selection
+        background: #1f2e42
+        color: white

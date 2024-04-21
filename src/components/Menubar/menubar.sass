@@ -1,0 +1,33 @@
+nav
+    height: 21px
+    width: 100%
+    background: #00000044
+    color: white
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    padding: 0 10px
+    font-size: 13px
+    line-height: 14px
+    font-weight: 500
+    user-select: none
+    .left, .right
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+    .left
+        gap: 14px
+        p
+            opacity: 0.8
+            cursor: pointer
+            transtion: all 0.5s ease-in-out
+            &:hover
+                opacity: 1
+    .right
+        gap: 10px
+    .time
+        width: 50px
+    .bold
+        font-weight: 700px
